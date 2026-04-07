@@ -22,10 +22,49 @@
 
 # misc
 .DS_Store
+Thumbs.db
+Desktop.ini
 *.pem
 AGENTS.md
 CLAUDE.md
 README.md
+*.bak
+*.backup
+*.tmp
+*.temp
+*.orig
+*.local
+
+# editors / local workspace files
+.vscode/
+.idea/
+*.code-workspace
+
+# local private notes and drafts
+notes/
+drafts/
+private/
+private-assets/
+local-only/
+exports/
+
+# local database / dump files
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+*.dump
+
+# secrets / certificate material
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+*.csr
+*.der
+*.jks
+*.keystore
 
 # debug
 npm-debug.log*
