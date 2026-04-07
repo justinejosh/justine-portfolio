@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 760" role="img" aria-labelledby="title desc">
+  <title id="title">Justine Larona placeholder portrait</title>
+  <desc id="desc">Abstract placeholder portrait with JL initials in green and navy.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#edf8f0" />
+      <stop offset="48%" stop-color="#e9f0ff" />
+      <stop offset="100%" stop-color="#d7f1e1" />
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#000080" />
+      <stop offset="100%" stop-color="#008C45" />
+    </linearGradient>
+  </defs>
+  <rect width="640" height="760" rx="48" fill="url(#bg)" />
+  <circle cx="108" cy="112" r="72" fill="#008C45" fill-opacity="0.12" />
+  <circle cx="552" cy="146" r="94" fill="#000080" fill-opacity="0.12" />
+  <circle cx="524" cy="644" r="90" fill="#008C45" fill-opacity="0.12" />
+  <rect x="116" y="88" width="408" height="584" rx="42" fill="white" fill-opacity="0.82" stroke="white" stroke-opacity="0.9" />
+  <rect x="148" y="120" width="344" height="520" rx="34" fill="url(#card)" />
+  <circle cx="320" cy="282" r="88" fill="white" fill-opacity="0.14" />
+  <path d="M238 458c18-52 58-78 82-78s64 26 82 78" fill="none" stroke="white" stroke-opacity="0.9" stroke-width="22" stroke-linecap="round" />
+  <circle cx="320" cy="272" r="56" fill="none" stroke="white" stroke-opacity="0.9" stroke-width="18" />
+  <rect x="194" y="526" width="252" height="56" rx="28" fill="white" fill-opacity="0.16" />
+  <text x="320" y="565" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="white">Replace with your photo</text>
+  <text x="320" y="692" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="700" fill="#000080" fill-opacity="0.16">JL</text>
+</svg>
