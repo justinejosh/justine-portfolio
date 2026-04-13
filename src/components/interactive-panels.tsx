@@ -160,10 +160,10 @@ export function InteractivePanels({
               Explore the parts of your portfolio that can keep growing.
             </h2>
             <p className="max-w-xl text-sm leading-7 text-[#355469] sm:text-base">
-              This panel is connected to a database-ready content model, so your
-              certifications, experience entries, projects, skill cards, GPA,
-              CV, and resume links can evolve without redesigning the whole
-              site.
+              This panel reads directly from your local portfolio content file,
+              so your certifications, experience entries, projects, skill
+              cards, GPA, CV, and resume links can evolve without redesigning
+              the whole site.
             </p>
           </div>
 

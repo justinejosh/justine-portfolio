@@ -213,23 +213,9 @@ export const portfolioContent: PortfolioData = {
   experiences: [
     {
       id: 1,
-      title: "Computer Science Student",
-      organization: "Our Lady of Fatima University",
-      period: "2023 - 2027",
-      category: "Education",
-      summary:
-        "Building a strong academic foundation in software development, analytics, and problem solving while preparing for ERP-focused work.",
-      highlights: [
-        "Currently enrolled as a Computer Science student.",
-        "Developing practical technical depth for ERP and analytics workflows.",
-        "Using university learning as a launchpad for real business tools.",
-      ],
-    },
-    {
-      id: 2,
       title: "Odoo ERP Learning Journey",
       organization: "Self-directed Training",
-      period: "2025 - Present",
+      period: "2026 - Present",
       category: "ERP",
       summary:
         "Studying how Odoo modules connect and how business processes flow across purchasing, inventory, accounting, invoicing, and sales.",
@@ -240,7 +226,7 @@ export const portfolioContent: PortfolioData = {
       ],
     },
     {
-      id: 3,
+      id: 2,
       title: "Data Analytics Practice",
       organization: "Independent Dashboard Work",
       period: "2026 - Present",
@@ -251,6 +237,49 @@ export const portfolioContent: PortfolioData = {
         "Very knowledgeable in Tableau and Power BI dashboard work.",
         "Comfortable using Excel dashboards, pivot tables, and spreadsheet reporting.",
         "Focused on presenting information clearly for decision making.",
+      ],
+    },
+    {
+      id: 3,
+      title: "IT Project Manager - Quiz Bee Event System",
+      organization: "ITPM311, 3rd Year 1st Semester",
+      period: "2025 - 2026",
+      category: "Project Management",
+      summary:
+        "Developed and managed a project timeline for a first-year Quiz Bee event system while coordinating tasks, tracking progress, and supporting smooth execution.",
+      highlights: [
+        "Allocated tasks among team members and monitored progress to meet deadlines.",
+        "Designed and used spreadsheets and Google Forms for planning, participant tracking, and event data organization.",
+        "Reviewed and validated quiz content to ensure accuracy, clarity, and fairness.",
+      ],
+    },
+    {
+      id: 4,
+      title: "Secretary",
+      organization:
+        "Fatima Computing and Multimedia Society (FCMS), Sta. Rosa Laguna Campus",
+      period: "2025 - 2026",
+      category: "Leadership",
+      summary:
+        "Serving as a campus organization secretary while supporting records, communication, and coordination for FCMS activities.",
+      highlights: [
+        "Assisting with documentation and written coordination for organization matters using Google Docs.",
+        "Organizing event registrations, attendance, and internal forms with Google Forms.",
+        "Tracking lists, schedules, and records with Google Sheets to keep information organized and accessible.",
+      ],
+    },
+    {
+      id: 5,
+      title: "Computer Science Student",
+      organization: "Our Lady of Fatima University",
+      period: "2023 - 2027",
+      category: "Education",
+      summary:
+        "Building a strong academic foundation in software development, analytics, and problem solving while preparing for ERP-focused work.",
+      highlights: [
+        "Currently enrolled as a Computer Science student.",
+        "Developing practical technical depth for ERP and analytics workflows.",
+        "Using university learning as a launchpad for real business tools.",
       ],
     },
   ],

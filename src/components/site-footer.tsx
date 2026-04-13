@@ -10,13 +10,15 @@ function ContactCard({
   href,
   icon,
   label,
-  value,
+  actionLabel,
+  hintLabel,
   external = false,
 }: {
   href: string;
   icon: React.ReactNode;
   label: string;
-  value: string;
+  actionLabel: string;
+  hintLabel: string;
   external?: boolean;
 }) {
   return (
@@ -24,7 +26,8 @@ function ContactCard({
       href={href}
       target={external ? "_blank" : undefined}
       rel={external ? "noreferrer" : undefined}
-      className="group flex h-full items-start gap-4 rounded-[24px] border border-[#000080]/10 bg-white/82 px-4 py-4 shadow-[0_14px_34px_rgba(4,16,71,0.08)] transition hover:-translate-y-1 hover:border-[#008C45]/35 hover:shadow-[0_18px_40px_rgba(0,140,69,0.16)]"
+      className="group flex h-full min-h-[92px] cursor-pointer items-start gap-4 rounded-[24px] border border-[#000080]/10 bg-white/82 px-4 py-4 shadow-[0_14px_34px_rgba(4,16,71,0.08)] transition duration-200 hover:-translate-y-1 hover:border-[#008C45]/35 hover:shadow-[0_18px_40px_rgba(0,140,69,0.16)] active:translate-y-0"
+      aria-label={`${actionLabel} ${label}`}
     >
       <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#000080] text-lg text-white shadow-[0_12px_26px_rgba(0,0,128,0.18)] transition group-hover:bg-[#008C45]">
         {icon}
@@ -33,8 +36,11 @@ function ContactCard({
         <span className="mono-type block text-[10px] font-semibold uppercase tracking-[0.24em] text-[#008C45]">
           {label}
         </span>
-        <span className="mt-2 block break-all text-sm leading-7 text-[#355469]">
-          {value}
+        <span className="mt-2 block text-sm font-semibold text-[#000080]">
+          {actionLabel}
+        </span>
+        <span className="mt-1 block text-xs font-medium text-[#355469] opacity-80">
+          {hintLabel}
         </span>
       </span>
     </a>
@@ -72,28 +78,32 @@ export function SiteFooter() {
   const contactItems = [
     {
       label: "Email",
-      value: contact.email,
+      actionLabel: "Open mail app",
+      hintLabel: "Tap to compose",
       href: getGmailComposeHref(contact.email),
       icon: <FaEnvelope />,
       external: true,
     },
     {
       label: "LinkedIn",
-      value: contact.linkedinUrl,
+      actionLabel: "View profile",
+      hintLabel: "Tap to open",
       href: contact.linkedinUrl,
       icon: <FaLinkedinIn />,
       external: true,
     },
     {
       label: "GitHub",
-      value: contact.githubUrl,
+      actionLabel: "View profile",
+      hintLabel: "Tap to open",
       href: contact.githubUrl,
       icon: <FaGithub />,
       external: true,
     },
     {
       label: "Phone",
-      value: contact.phone,
+      actionLabel: "Open contact",
+      hintLabel: "Tap to call",
       href: getPhoneHref(contact.phone),
       icon: <FaPhone />,
     },
@@ -112,9 +122,8 @@ export function SiteFooter() {
                 Justine Josh G. Larona Portfolio
               </p>
               <p className="max-w-2xl text-sm leading-7 text-[#355469]">
-                Built with Next.js, Prisma, and a Postgres-ready structure for
-                safe Vercel deployment, with a layout designed to stay clean on
-                both desktop and mobile.
+                Built with Next.js and a simple file-based content setup, with a
+                layout designed to stay clean on both desktop and mobile.
               </p>
             </div>
           </div>
@@ -137,7 +146,8 @@ export function SiteFooter() {
                 href={item.href}
                 icon={item.icon}
                 label={item.label}
-                value={item.value}
+                actionLabel={item.actionLabel}
+                hintLabel={item.hintLabel}
                 external={item.external}
               />
             ))}
