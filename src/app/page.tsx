@@ -9,17 +9,44 @@ const directionCards = [
   {
     title: "ERP Developer Path",
     description:
-      "Focused on understanding how business processes are translated into Odoo modules, views, and workflows.",
+      "Learning how Odoo modules share records, trigger downstream actions, and support real operational workflows.",
   },
   {
     title: "Data Analyst Mindset",
     description:
-      "Comfortable shaping dashboards and reports through Tableau, Power BI, Excel, and spreadsheet-driven analysis.",
+      "Building dashboards and reports that turn raw data into clearer KPIs, trends, and decision-support views.",
   },
   {
     title: "Business-aware Builder",
     description:
-      "Interested in software that solves real operational needs in purchasing, inventory, accounting, invoicing, and sales.",
+      "Focused on software and reporting that reduce confusion, improve visibility, and support better business decisions.",
+  },
+];
+
+const erpFlowSteps = [
+  {
+    step: "01",
+    title: "Sales",
+    description:
+      "Capture the order clearly and understand what the customer actually needs.",
+  },
+  {
+    step: "02",
+    title: "Inventory",
+    description:
+      "Track stock movement and make sure product availability supports fulfillment.",
+  },
+  {
+    step: "03",
+    title: "Invoicing",
+    description:
+      "Turn the completed transaction into billing records that match the workflow.",
+  },
+  {
+    step: "04",
+    title: "Accounting",
+    description:
+      "Connect financial outputs so operations and reporting stay aligned.",
   },
 ];
 
@@ -106,26 +133,27 @@ export default async function Home({ searchParams }: HomePageProps) {
                   Justine Josh G. Larona
                 </h1>
                 <p className="max-w-2xl text-base leading-8 text-white/84 sm:text-lg">
-                  A green-and-navy portfolio designed around your current story:
-                  growing in Odoo, building confidence in ERP workflows, and
-                  pairing that path with strong data analytics skills.
+                  Aspiring ERP Developer focused on Odoo systems and data
+                  analytics for business decision-making, with growing
+                  experience in workflow thinking, reporting, and practical
+                  problem solving.
                 </p>
               </div>
 
               <div className="flex flex-col gap-3 sm:flex-row">
                 <Link
-                  href="/about"
+                  href="/projects"
                   className="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold !text-[#000080] transition hover:bg-[#f4efe7] hover:!text-[#000080]"
                   style={{ color: "#000080" }}
                 >
-                  Open About Page
+                  View Projects
                 </Link>
                 <Link
-                  href="/#portfolio"
+                  href="/documents"
                   className="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold !text-white transition hover:border-white hover:bg-white/16 hover:!text-white"
                   style={{ color: "#ffffff" }}
                 >
-                  Explore Portfolio Board
+                  Open Resume and CV
                 </Link>
               </div>
 
@@ -210,6 +238,46 @@ export default async function Home({ searchParams }: HomePageProps) {
             </p>
           </article>
         ))}
+      </section>
+
+      <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="glass-panel rounded-[34px] p-6 sm:p-8">
+          <div className="max-w-3xl space-y-4">
+            <p className="mono-type text-xs uppercase tracking-[0.3em] text-[#008C45]">
+              ERP flow thinking
+            </p>
+            <h2 className="display-type text-3xl font-semibold text-[#000080] sm:text-4xl">
+              How I understand Odoo business flow
+            </h2>
+            <p className="text-sm leading-8 text-[#355469] sm:text-base">
+              One of the ways I want to stand out is by understanding how each
+              business step connects to the next. This is the process view I am
+              actively developing as I learn Odoo.
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-4 lg:grid-cols-4">
+            {erpFlowSteps.map((step) => (
+              <article
+                key={step.step}
+                className="relative rounded-[28px] border border-[#000080]/10 bg-white/82 p-5 shadow-[0_16px_36px_rgba(4,16,71,0.08)]"
+              >
+                <div className="flex items-center justify-between gap-3">
+                  <span className="mono-type text-xs uppercase tracking-[0.28em] text-[#008C45]">
+                    Step {step.step}
+                  </span>
+                  <span className="h-2 w-2 rounded-full bg-[#000080]" />
+                </div>
+                <h3 className="mt-4 text-2xl font-semibold text-[#000080]">
+                  {step.title}
+                </h3>
+                <p className="mt-3 text-sm leading-7 text-[#355469]">
+                  {step.description}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
       </section>
 
       <section className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">

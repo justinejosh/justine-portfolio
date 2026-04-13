@@ -46,10 +46,9 @@ export default async function CertificationsPage() {
               Certification tracks and credential collections
             </h1>
             <p className="text-sm leading-8 text-[#355469] sm:text-base">
-              This page now works like a program overview. Instead of showing every
-              certificate immediately, it shows the certification tracks you are
-              building, such as your Google Data Analytics journey and your future
-              ERP-focused certifications.
+              This page now works like a program overview. Instead of showing
+              every certificate immediately, it shows the certification tracks
+              you are building and the momentum inside each one.
             </p>
           </div>
 
@@ -153,6 +152,9 @@ export default async function CertificationsPage() {
                             <span className="rounded-full bg-[#000080]/6 px-3 py-1 text-xs font-semibold text-[#000080]">
                               {program.category}
                             </span>
+                            <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-[#355469] shadow-[0_10px_22px_rgba(4,16,71,0.06)]">
+                              {program.statusLabel}
+                            </span>
                           </div>
                           <span className="mono-type text-xs uppercase tracking-[0.26em] text-[#355469]">
                             {formatIssuedAt(program.latestIssuedAt)}
@@ -165,6 +167,30 @@ export default async function CertificationsPage() {
                         <p className="mt-4 text-sm leading-7 text-[#355469]">
                           {program.description}
                         </p>
+
+                        {program.progressLabel ? (
+                          <div className="mt-6 space-y-3">
+                            <div className="flex items-center justify-between gap-3">
+                              <span className="text-sm font-semibold text-[#000080]">
+                                {program.progressLabel}
+                              </span>
+                              {program.totalExpectedCount ? (
+                                <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[#355469]">
+                                  {program.statusLabel}
+                                </span>
+                              ) : null}
+                            </div>
+
+                            {program.progressPercent !== null ? (
+                              <div className="h-2 overflow-hidden rounded-full bg-[#000080]/8">
+                                <div
+                                  className="h-full rounded-full bg-[linear-gradient(90deg,#008C45,#000080)]"
+                                  style={{ width: `${program.progressPercent}%` }}
+                                />
+                              </div>
+                            ) : null}
+                          </div>
+                        ) : null}
 
                         <div className="mt-6 flex items-center justify-end">
                           <span className="inline-flex rounded-full bg-[#000080] px-5 py-3 text-sm font-semibold text-white transition group-hover:bg-[#008C45]">

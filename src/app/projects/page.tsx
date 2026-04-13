@@ -29,6 +29,10 @@ const projectGroups = [
   },
 ] as const;
 
+function getProjectLinkLabel(url: string) {
+  return url.includes("github.com") ? "View code" : "Open project";
+}
+
 export default async function ProjectsPage() {
   const portfolio = await getPortfolio();
   const erpProjects = portfolio.projects.filter(
@@ -190,11 +194,12 @@ export default async function ProjectsPage() {
                           className="mt-6 inline-flex self-start rounded-full bg-[#000080] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#008C45]"
                           style={{ color: "#ffffff" }}
                         >
-                          Open project
+                          {getProjectLinkLabel(project.projectUrl)}
                         </a>
                       ) : (
                         <p className="mt-6 text-sm font-semibold text-[#000080]/65">
-                          Add a live link later when this project is ready to share.
+                          The project direction is planned and ready to be replaced
+                          with a real build when you are ready to publish it.
                         </p>
                       )}
                     </article>

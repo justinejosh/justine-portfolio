@@ -69,6 +69,28 @@ export default async function CertificationProgramPage({
             <p className="text-sm leading-8 text-[#355469] sm:text-base">
               {program.description}
             </p>
+
+            {program.progressLabel ? (
+              <div className="mt-5 max-w-2xl rounded-[24px] bg-white/82 p-4 shadow-[0_16px_36px_rgba(4,16,71,0.08)]">
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="rounded-full bg-[#008C45]/10 px-3 py-1 text-xs font-semibold text-[#008C45]">
+                    {program.statusLabel}
+                  </span>
+                  <span className="rounded-full bg-[#000080]/6 px-3 py-1 text-xs font-semibold text-[#000080]">
+                    {program.progressLabel}
+                  </span>
+                </div>
+
+                {program.progressPercent !== null ? (
+                  <div className="mt-3 h-2 overflow-hidden rounded-full bg-[#000080]/8">
+                    <div
+                      className="h-full rounded-full bg-[linear-gradient(90deg,#008C45,#000080)]"
+                      style={{ width: `${program.progressPercent}%` }}
+                    />
+                  </div>
+                ) : null}
+              </div>
+            ) : null}
           </div>
 
           <div className="flex flex-col gap-3 sm:flex-row">
@@ -101,8 +123,8 @@ export default async function CertificationProgramPage({
                 {program.title}
               </h2>
               <p className="text-sm leading-8 text-[#355469] sm:text-base">
-                Keep your overall program certificate here once you finish the full
-                certification track.
+                Keep your overall program certificate here once you finish the
+                full certification track.
               </p>
             </div>
           </div>

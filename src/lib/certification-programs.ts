@@ -15,6 +15,11 @@ export type CertificationProgramSummary = CertificationProgramDefinition & {
   certifications: PortfolioCertification[];
   linkedCount: number;
   latestIssuedAt: string | null;
+  completedCount: number;
+  totalExpectedCount: number | null;
+  progressLabel: string | null;
+  statusLabel: string;
+  progressPercent: number | null;
 };
 
 const certificationProgramDefinitions: Record<string, CertificationProgramDefinition> = {
@@ -136,6 +141,10 @@ function getLatestIssuedAt(certifications: PortfolioCertification[]) {
   }, null);
 }
 
+function isCompletedCertification(certification: PortfolioCertification) {
+  return certification.status.toLowerCase() === "uploaded" || Boolean(certification.credentialUrl);
+}
+
 export function getCertificationPrograms(
   certifications: PortfolioCertification[],
 ): CertificationProgramSummary[] {
@@ -151,12 +160,42 @@ export function getCertificationPrograms(
     .map(([programSlug, items]) => {
       const definition = getCertificationProgramDefinition(programSlug);
       const sortedItems = [...items].sort(compareCourseItems);
+      const courseCertificates = sortedItems.filter(
+        (item) => !item.isProgramCertificate,
+      );
+      const completedCount = courseCertificates.filter(isCompletedCertification).length;
+      const totalExpectedCount = definition.totalCourses ?? null;
+      const progressLabel = totalExpectedCount
+        ? `${completedCount}/${totalExpectedCount} completed`
+        : courseCertificates.length > 0
+          ? `${completedCount} credential${completedCount === 1 ? "" : "s"} linked`
+          : null;
+      const progressPercent = totalExpectedCount
+        ? Math.max(
+            0,
+            Math.min(100, Math.round((completedCount / totalExpectedCount) * 100)),
+          )
+        : null;
+      const statusLabel = totalExpectedCount
+        ? completedCount === 0
+          ? "Getting started"
+          : completedCount < totalExpectedCount
+            ? "In progress"
+            : "Coursework complete"
+        : completedCount > 0
+          ? "Growing collection"
+          : "Ready to build";
 
       return {
         ...definition,
         certifications: sortedItems,
         linkedCount: sortedItems.filter((item) => item.credentialUrl).length,
         latestIssuedAt: getLatestIssuedAt(sortedItems),
+        completedCount,
+        totalExpectedCount,
+        progressLabel,
+        statusLabel,
+        progressPercent,
       };
     })
     .sort((a, b) => {

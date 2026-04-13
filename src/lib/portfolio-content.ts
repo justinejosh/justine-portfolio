@@ -4,15 +4,16 @@ export const portfolioContent: PortfolioData = {
   profile: {
     fullName: "Justine Josh G. Larona",
     preferredName: "JJ",
-    headline: "Your Future ERP Developer and Data Analyst",
+    headline:
+      "Aspiring ERP Developer focused on Odoo systems and data analytics for business decision-making",
     age: 20,
     school: "Our Lady of Fatima University",
     degreeProgram: "Bachelor of Science in Computer Science",
-    bio: "I am a Computer Science student who is building a career around ERP systems, practical business workflows, and data storytelling.",
+    bio: "I am a Computer Science student building toward ERP development and data analytics work that supports clearer business operations and better decision-making.",
     summary:
-      "Hello, I'm JJ! I am currently exploring how Odoo's framework works under the hood, especially how Python logic connects with XML structure and how apps interact with one another. Alongside ERP learning, I enjoy turning data into dashboards through Tableau, Power BI, Excel, and spreadsheet-driven reporting.",
+      "I am building practical knowledge in Odoo by understanding how Python logic, XML views, and module relationships support real workflows from sales to accounting. In parallel, I turn data into dashboards and reports through Tableau, Power BI, Excel, and spreadsheets to make business information easier to read and act on.",
     learningFocus:
-      "I am currently learning purchasing, inventory, invoicing, accounting, and sales inside Odoo ERP while strengthening my analytics toolkit.",
+      "I am currently learning how purchasing, inventory, invoicing, accounting, and sales connect inside Odoo ERP while sharpening my analytics toolkit for reporting and decision support.",
     focusAreas: [
       "Odoo purchasing",
       "Odoo inventory",
@@ -50,7 +51,7 @@ export const portfolioContent: PortfolioData = {
       courseLabel: null,
       courseOrder: 0,
       issuer: "Coursera",
-      status: "Pending",
+      status: "In Progress",
       issuedAt: null,
       description:
         "Use this top card for the final Google Data Analytics program certificate once you complete all of the course certificates under the track.",
@@ -218,11 +219,11 @@ export const portfolioContent: PortfolioData = {
       period: "2026 - Present",
       category: "ERP",
       summary:
-        "Studying how Odoo modules connect and how business processes flow across purchasing, inventory, accounting, invoicing, and sales.",
+        "Building practical understanding of how Odoo Sales, Inventory, Invoicing, and Accounting connect to support real business operations.",
       highlights: [
-        "Knowledgeable in Odoo's framework and how the applications interact with one another.",
-        "Learning how Python logic interacts with XML views and structures inside Odoo.",
-        "Currently gaining more hands-on experience with import and export data tasks.",
+        "Mapped how modules share data across sales orders, inventory movements, invoices, and accounting entries.",
+        "Practiced reading how Python logic and XML views work together to shape business workflows.",
+        "Strengthening familiarity with data import, export, and cross-module process flow inside Odoo.",
       ],
     },
     {
@@ -232,11 +233,11 @@ export const portfolioContent: PortfolioData = {
       period: "2026 - Present",
       category: "Analytics",
       summary:
-        "Turning raw data into dashboards, pivot-based reports, and spreadsheet-driven insights across modern BI tools.",
+        "Creating dashboards and spreadsheet-based reports that turn raw data into clearer performance insights for decision-making.",
       highlights: [
-        "Very knowledgeable in Tableau and Power BI dashboard work.",
-        "Comfortable using Excel dashboards, pivot tables, and spreadsheet reporting.",
-        "Focused on presenting information clearly for decision making.",
+        "Built dashboard views in Tableau and Power BI to present KPIs and trends more clearly.",
+        "Used Excel pivot tables, formulas, and structured sheets to organize and summarize business data.",
+        "Focused on making reports easier to read, compare, and act on.",
       ],
     },
     {
@@ -250,7 +251,7 @@ export const portfolioContent: PortfolioData = {
       highlights: [
         "Allocated tasks among team members and monitored progress to meet deadlines.",
         "Designed and used spreadsheets and Google Forms for planning, participant tracking, and event data organization.",
-        "Reviewed and validated quiz content to ensure accuracy, clarity, and fairness.",
+        "Reviewed and validated quiz content to improve accuracy, clarity, and fairness during event execution.",
       ],
     },
     {
@@ -261,11 +262,11 @@ export const portfolioContent: PortfolioData = {
       period: "2025 - 2026",
       category: "Leadership",
       summary:
-        "Serving as a campus organization secretary while supporting records, communication, and coordination for FCMS activities.",
+        "Supporting FCMS operations through organized documentation, communication, and record management for campus activities.",
       highlights: [
-        "Assisting with documentation and written coordination for organization matters using Google Docs.",
-        "Organizing event registrations, attendance, and internal forms with Google Forms.",
-        "Tracking lists, schedules, and records with Google Sheets to keep information organized and accessible.",
+        "Prepared organization documents and written coordination materials using Google Docs.",
+        "Managed registrations, attendance, and internal requests through Google Forms.",
+        "Tracked schedules, lists, and records in Google Sheets to keep information organized and accessible.",
       ],
     },
     {
@@ -275,7 +276,7 @@ export const portfolioContent: PortfolioData = {
       period: "2023 - 2027",
       category: "Education",
       summary:
-        "Building a strong academic foundation in software development, analytics, and problem solving while preparing for ERP-focused work.",
+        "Building a strong academic foundation in software development, analytics, and systems thinking while preparing for ERP-focused work.",
       highlights: [
         "Currently enrolled as a Computer Science student.",
         "Developing practical technical depth for ERP and analytics workflows.",
@@ -294,27 +295,29 @@ export const portfolioContent: PortfolioData = {
       period: "2025",
       status: "Finished",
       summary:
-        "A real estate module built inside Odoo's framework.",
+        "Built an Odoo real estate module to understand how model logic, views, and workflow steps connect inside a business application.",
       highlights: [
-        "Studying how one Odoo module hands data and process flow to another.",
-        "Breaking down how Python logic and XML views support each ERP process.",
-        "Using the project as a foundation for future custom Odoo development work.",
+        "Explored how one Odoo module hands records and process flow to another across the application.",
+        "Connected Python logic and XML views to support each ERP step in the module.",
+        "Used the build as a foundation for future custom Odoo workflow projects.",
       ],
       tools: ["Odoo", "Python", "XML"],
       projectUrl: "https://github.com/justinejosh/RealEstateOdoo",
     },
     {
       id: 2,
-      title: "Pending",
+      title: "Coming Soon: Sales Workflow Simulation",
       category: "ERP-focused",
-      period: "Pending",
-      status: "Pending",
+      period: "Planned for 2026",
+      status: "Coming soon",
       summary:
-        "Pending",
+        "Planned Odoo practice project focused on following a sales transaction from quotation to inventory movement and accounting output.",
       highlights: [
-        "Pending",
+        "Will model how sales, stock, and accounting connect in a complete business flow.",
+        "Will document the key records, views, and validations used at each stage.",
+        "Will become a stronger portfolio example of process thinking inside Odoo.",
       ],
-      tools: [],
+      tools: ["Odoo", "Python", "XML"],
       projectUrl: null,
     },
     {
@@ -324,27 +327,29 @@ export const portfolioContent: PortfolioData = {
       period: "2025",
       status: "Finished",
       summary:
-        "An ongoing analytics project focused on turning raw datasets into readable dashboards and business-facing reports.",
+        "Built a dashboard project that turns raw retail data into clearer sales reporting and KPI-driven business insights.",
       highlights: [
-        "Practicing KPI presentation through dashboard layouts.",
-        "Improving storytelling with charts, filters, and summary insights.",
-        "Using the project to strengthen decision-support reporting skills.",
+        "Presented sales KPIs through dashboard layouts designed for faster review.",
+        "Used charts, filters, and summary views to improve storytelling and comparison.",
+        "Strengthened decision-support reporting skills through practical dashboard design.",
       ],
       tools: ["Power BI", "Excel"],
       projectUrl: "https://github.com/justinejosh/Superstore-Sales-Dashboard",
     },
     {
       id: 4,
-      title: "Pending",
+      title: "Coming Soon: Financial Performance Dashboard",
       category: "Data Analytics-focused",
-      period: "2026 - Present",
-      status: "Ongoing",
+      period: "Planned for 2026",
+      status: "Coming soon",
       summary:
-        "Pending",
+        "Planned analytics project focused on turning business data into a clearer financial dashboard for reporting and decision support.",
       highlights: [
-      "Pending",
+        "Will combine spreadsheet preparation with dashboard storytelling.",
+        "Will highlight KPIs, trends, and variance views for faster analysis.",
+        "Will strengthen portfolio evidence in Excel and Power BI reporting.",
       ],
-      tools: [],
+      tools: ["Power BI", "Excel", "Spreadsheet Tools"],
       projectUrl: null,
     },
   ],

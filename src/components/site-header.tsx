@@ -6,6 +6,7 @@ import { useState } from "react";
 
 const links = [
   { href: "/", label: "Home" },
+  { href: "/?tab=skills#portfolio", label: "Skills & Tools" },
   { href: "/certifications", label: "Certifications" },
   { href: "/experience", label: "Experience" },
   { href: "/projects", label: "Projects" },
@@ -16,8 +17,20 @@ const links = [
 export function SiteHeader() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const isSkillsMode =
+    pathname === "/" &&
+    typeof window !== "undefined" &&
+    new URLSearchParams(window.location.search).get("tab") === "skills";
 
   function isLinkActive(label: string) {
+    if (label === "Skills & Tools") {
+      return pathname === "/" && isSkillsMode;
+    }
+
+    if (label === "Home") {
+      return pathname === "/" && !isSkillsMode;
+    }
+
     return links.find((link) => link.label === label)?.href === pathname;
   }
 

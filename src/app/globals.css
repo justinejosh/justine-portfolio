@@ -25,6 +25,23 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes targetPulse {
+  0% {
+    opacity: 0;
+    transform: scale(0.985);
+  }
+
+  20% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.01);
+  }
+}
+
 body {
   margin: 0;
   color: var(--foreground);
@@ -79,4 +96,31 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.84);
   box-shadow: 0 24px 60px rgba(4, 16, 71, 0.12);
   backdrop-filter: blur(18px);
+}
+
+.jump-target {
+  position: relative;
+}
+
+.jump-target:target::after {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  border-radius: 38px;
+  border: 1px solid rgba(0, 140, 69, 0.28);
+  box-shadow:
+    0 0 0 6px rgba(0, 140, 69, 0.08),
+    0 20px 44px rgba(0, 0, 128, 0.08);
+  pointer-events: none;
+  animation: targetPulse 1.2s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .jump-target:target::after {
+    animation: none;
+  }
 }

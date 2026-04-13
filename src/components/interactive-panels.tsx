@@ -14,7 +14,7 @@ type TabId =
   | "documents";
 
 const tabs: Array<{ id: TabId; label: string; eyebrow: string; href?: string }> = [
-  { id: "skills", label: "Skills", eyebrow: "What I use" },
+  { id: "skills", label: "Skills & Tools", eyebrow: "What I use" },
   {
     id: "certifications",
     label: "Certifications",
@@ -148,7 +148,7 @@ export function InteractivePanels({
   return (
     <section
       id="portfolio"
-      className="mx-auto w-full max-w-7xl scroll-mt-28 px-4 sm:px-6 lg:px-8"
+      className="jump-target mx-auto w-full max-w-7xl scroll-mt-28 px-4 sm:px-6 lg:px-8"
     >
       <div className="glass-panel-strong rounded-[36px] p-5 sm:p-8">
         <div className="flex flex-col gap-6 border-b border-[#000080]/10 pb-8 lg:flex-row lg:items-end lg:justify-between">
@@ -537,7 +537,7 @@ export function InteractivePanels({
         ) : null}
 
         {activeTab === "documents" ? (
-          <div id="documents" className="scroll-mt-28 space-y-6 pt-8">
+          <div id="documents" className="jump-target scroll-mt-28 space-y-6 pt-8">
             <div>
               <h3 className="text-2xl font-semibold text-[#000080]">
                 Curriculum vitae, resume, and GPA space
